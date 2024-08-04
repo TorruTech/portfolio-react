@@ -37,7 +37,7 @@ export const Faqs = () => {
               {item.question}
             </h3>
             <img
-              src="./public/images/chevronRight.svg"
+              src="./images/chevronRight.svg"
               alt="chevron"
               className={`chevronRight ${activeIndex === index ? 'active' : ''}`}
             />
