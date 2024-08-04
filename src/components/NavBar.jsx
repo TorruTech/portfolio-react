@@ -19,7 +19,7 @@ export const NavBar = () => {
   return (
     <nav className={scrolled ? 'black-bg' : ''}>
       <div id="header">
-        <img src="../../public/images/avatar.png" alt="Imagen de avatar" />
+        <img src="./images/avatar.png" alt="Imagen de avatar" />
         <h2>TorruTech</h2>
       </div>
       <div id="navLinks">
