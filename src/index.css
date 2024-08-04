@@ -507,6 +507,9 @@ aside h1 {
   padding: 10px;
 }
 
+.question.active {
+  color: var(--primary-color);
+}
 /* Estilos para las respuestas */
 .answers {
   text-align: justify;

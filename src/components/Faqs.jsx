@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// Datos de preguntas frecuentes
 const faqData = [
   {
     question: "¿Cómo me defino?",
@@ -29,28 +28,26 @@ export const Faqs = () => {
 
   return (
     <aside>
-      <h1>FAQs</h1>
-      <div id="questionsContainer">
-        {faqData.map((item, index) => (
-          <div className="questionItem" key={index}>
-            <div className="questionCircle" onClick={() => handleToggle(index)}>
-              <h3 className="question">{item.question}</h3>
-              <img 
-                src="./images/chevronRight.svg" 
-                alt="chevron" 
-                className="chevronRight"
-                style={{ transform: activeIndex === index ? 'rotate(90deg)' : 'rotate(0deg)' }}
-              />
-            </div>
-            <p 
-              className="answers" 
-              style={{ display: activeIndex === index ? 'block' : 'none' }}
-            >
-              {item.answer}
-            </p>
+    <h1>FAQs</h1>
+    <div id="questionsContainer">
+      {faqData.map((item, index) => (
+        <div className="questionItem" key={index}>
+          <div className="questionCircle" onClick={() => handleToggle(index)}>
+            <h3 className={`question ${activeIndex === index ? 'active' : ''}`}>
+              {item.question}
+            </h3>
+            <img
+              src="./public/images/chevronRight.svg"
+              alt="chevron"
+              className={`chevronRight ${activeIndex === index ? 'active' : ''}`}
+            />
           </div>
-        ))}
-      </div>
-    </aside>
+          <p className={`answers ${activeIndex === index ? 'active' : ''}`}>
+            {item.answer}
+          </p>
+        </div>
+      ))}
+    </div>
+  </aside>
   );
 };

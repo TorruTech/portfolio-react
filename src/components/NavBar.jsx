@@ -16,6 +16,33 @@ export const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Selecciona todos los enlaces con hash (#)
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    // Añade un evento click a cada enlace
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene el comportamiento por defecto del enlace
+
+        // Obtiene el id del elemento al que se desea desplazar
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          // Calcula la posición del objetivo
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+          // Desplazamiento suave con duración de 800ms (ajustar según necesidad)
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }, []);
+
   return (
     <nav className={scrolled ? 'black-bg' : ''}>
       <div id="header">
