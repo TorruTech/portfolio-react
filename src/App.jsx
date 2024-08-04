@@ -5,6 +5,7 @@ import { Faqs } from './components/Faqs';
 import { Galaxy } from './components/Galaxy';
 import { AboutMe } from './components/AboutMe';
 import { Skills } from './components/Skills';
+import { Proyects } from './components/Proyects';
 import { Mountains } from './components/Mountains';
 import { VideoContainer } from './components/VideoContainer';
 import { FormContainer } from './components/FormContainer';
@@ -12,17 +13,18 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <body>
       <NavBar />
       <Faqs />
       <Galaxy />
       <AboutMe />
       <Skills />
+      <Proyects />
       <Mountains />
       <VideoContainer />
       <FormContainer />
       <Footer />
-    </div>
+    </body>
   );
 }
 
