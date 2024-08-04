@@ -36,7 +36,7 @@ export const Faqs = () => {
             <div className="questionCircle" onClick={() => handleToggle(index)}>
               <h3 className="question">{item.question}</h3>
               <img 
-                src="./public/images/chevronRight.svg" 
+                src="./images/chevronRight.svg" 
                 alt="chevron" 
                 className="chevronRight"
                 style={{ transform: activeIndex === index ? 'rotate(90deg)' : 'rotate(0deg)' }}
