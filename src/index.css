@@ -764,16 +764,26 @@ aside h1 {
   }
 }
 
+@media (max-width: 600px) {
 
-@media (max-width: 480px) {
-
-  h3 {
-    font-size: 1rem;
-  }
-  
   nav {
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #navLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.7rem;
   }
 
   nav img {
@@ -808,7 +818,7 @@ aside h1 {
   }
 
   #skills h3 {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
@@ -816,6 +826,15 @@ aside h1 {
     width: 100%;
     font-size: 0.85rem;
     text-align: center;
+  }
+
+  #mountains p {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+
+  #projects h1 {
+    font-size: 2rem;
   }
 
   section {
@@ -827,6 +846,10 @@ aside h1 {
     width: 150px;
     height: 50px;
     font-size: 0.75rem;
+  }
+
+  #aboutMe {
+    align-items: center;
   }
 
   footer h5 {
@@ -862,51 +885,20 @@ aside h1 {
     bottom: 10px;
     left: 5%;
     text-align: center;
+    display: flex; /* Ensure aside is visible */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #video {
+    display: none;
   }
 }
 
-/* Ensure aside is fixed on all screen sizes */
 aside {
-  display: none;
+  position: fixed;
   z-index: 20;
   right: 30px;
   bottom: 30%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Define la animación de deslizamiento */
-@keyframes slideInFromLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-/* Aplica la animación al contenido del section */
-.section-content {
-  opacity: 0; /* Empieza invisible */
-  transform: translateX(-100%); /* Empieza fuera de vista, a la izquierda */
-  animation: slideInFromLeft 1s forwards; /* Aplica la animación */
-}
-
-.section-content.visible {
-  animation: slideInFromLeft 1s forwards; /* Aplica la animación cuando se hace visible */
-}
-
-
