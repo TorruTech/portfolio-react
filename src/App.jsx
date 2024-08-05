@@ -15,13 +15,13 @@ function App() {
   return (
     <body>
       <NavBar />
-      <Faqs />
       <Galaxy />
       <AboutMe />
       <Skills />
       <Proyects />
       <Mountains />
       <VideoContainer />
+      <Faqs />
       <FormContainer />
       <Footer />
     </body>

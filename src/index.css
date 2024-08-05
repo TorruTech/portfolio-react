@@ -685,105 +685,26 @@ aside h1 {
   }
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #navLinks {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  .content h1 {
-    font-size: 2rem;
-  }
-
-  .content h2 {
-    font-size: 1.2rem;
-  }
-
-  .content h4 {
-    width: 120px;
-    font-size: 0.75rem;
-  }
-
-  #skills h1 {
-    font-size: 2.5rem;
-  }
-
-  #skills h3 {
-    font-size: 0.85rem;
-  }
-
-  #languages {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .languageBox {
-    padding: 10px;
-  }
-
-  #projects h1 {
-    font-size: 2.5rem;
-  }
-
-  #projectsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .singleProject img {
-    height: auto;
-  }
-
-  .mountainsContent p {
-    width: 100%;
-  }
-
-  .form-container h1 {
-    font-size: 2.5rem;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  input, textarea {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 600px) {
 
   nav {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
 
   #navLinks {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    flex-wrap: nowrap; /* Evita que los enlaces se envuelvan a la siguiente fila */
   }
 
   nav a {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    white-space: nowrap; /* Evita que los enlaces se envuelvan dentro de ellos mismos */
   }
 
   nav img {
@@ -812,6 +733,11 @@ aside h1 {
     text-align: center;
   }
 
+  #skills {
+    padding: 20px;
+    text-align: center;
+  }
+
   #skills h1 {
     font-size: 2rem;
     text-align: center;
@@ -820,6 +746,32 @@ aside h1 {
   #skills h3 {
     font-size: 0.8rem;
     text-align: center;
+  }
+
+  #languages {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para móviles */
+    gap: 20px; /* Espacio entre las filas */
+  }
+
+  .languageBox {
+    display: flex;
+    flex-direction: column; /* Cambia la disposición a columna */
+    align-items: center;
+    width: 300px;
+  }
+
+  .titles {
+    width: 100%;
+    text-align: center;
+  }
+
+  .barsBg {
+    width: 100%;
+  }
+
+  .bars {
+    width: 90%; /* Ajusta el ancho de las barras de progreso */
   }
 
   .mountainsContent p {
@@ -864,7 +816,7 @@ aside h1 {
 
   /* Form centering adjustments */
   .form-container {
-    padding: 20px;
+    padding: 0px;
     text-align: center;
   }
 
@@ -881,24 +833,19 @@ aside h1 {
 
   /* Aside fixed positioning */
   aside {
-    width: 90%;
-    bottom: 10px;
-    left: 5%;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
     text-align: center;
-    display: flex; /* Ensure aside is visible */
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    display: block; /* Ensure aside is visible */
+    padding: 20px;
+    border: none;
+    border-radius: 0px;
+    padding: 30px;
   }
 
   #video {
     display: none;
   }
-}
-
-aside {
-  position: fixed;
-  z-index: 20;
-  right: 30px;
-  bottom: 30%;
 }
