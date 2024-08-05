@@ -1,4 +1,3 @@
-
 :root {
   --primary-color: #FFBD39;
 }
@@ -14,7 +13,7 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   font-family: "cascadia code", sans-serif;
-  height: 100%; /* Asegura que el html y el body ocupen todo el alto */
+  height: 100%;
 }
 
 body {
@@ -40,7 +39,7 @@ nav {
   z-index: 10;
   padding-bottom: 20px;
   transition: background-color 3s ease;
-  background-color: transparent; /* O el color de fondo original */
+  background-color: transparent;
 }
 
 nav.black-bg {
@@ -56,7 +55,7 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
 
 #navLinks {
@@ -75,16 +74,13 @@ nav a {
 
 nav a:hover {
   transition-duration: 0.5s;
-  filter: drop-shadow(
-    0 0 30px rgb(232, 215, 28)
-  );
+  filter: drop-shadow(0 0 30px rgb(232, 215, 28));
   color: var(--primary-color);
 }
 
 nav a:active {
   transition-duration: 3s;
 }
-
 
 h2 {
   color: white;
@@ -110,13 +106,13 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Ajusta el color y la opacidad */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
 
 .content {
   position: relative;
-  z-index: 3; /* Asegura que el contenido esté por encima de la capa semitransparente */
+  z-index: 3;
   color: white;
   text-align: center;
   top: 50%;
@@ -167,8 +163,8 @@ h2 {
 #socialMedia {
   display: flex;
   gap: 40px;
-  position: absolute; /* Cambiar a posición absoluta */
-  bottom: -180px; /* Ajusta este valor para mover los íconos hacia abajo */
+  position: absolute;
+  bottom: -180px;
 }
 
 #socialMedia i {
@@ -195,7 +191,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: solid 5px yellow
+  border: solid 5px yellow;
 }
 
 #aboutMe {
@@ -203,7 +199,7 @@ section {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  width: 700px
+  width: 700px;
 }
 
 section img {
@@ -271,8 +267,8 @@ section button:hover, #mountains button:hover, form button:hover {
 
 #languages {
   display: grid;
-  grid-template-columns: repeat(2, 600px); /* Dos columnas de 500px cada una */
-  grid-template-rows: repeat(4, auto); /* Cuatro filas */
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: repeat(4, auto);
   color: white;
 }
 
@@ -283,10 +279,10 @@ section button:hover, #mountains button:hover, form button:hover {
 }
 
 .languageBox {
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño dentro de cada languageBox */
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 30px;
-  box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+  box-sizing: border-box;
 }
 
 .titles {
@@ -316,7 +312,7 @@ section button:hover, #mountains button:hover, form button:hover {
       width: 0;
   }
   100% {
-      width: 90%; /* Cambia este valor si necesitas diferentes anchos */
+      width: 90%;
   }
 }
 
@@ -365,8 +361,10 @@ section button:hover, #mountains button:hover, form button:hover {
 }
 
 .singleProject:hover img {
-  transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+  transform: scale(1.05);
   box-shadow: 0 0 30px rgb(232, 215, 28);
+  opacity: 0.7;
+  cursor: crosshair;
 }
 
 #mountains {
@@ -385,13 +383,13 @@ section button:hover, #mountains button:hover, form button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Ajusta el color y la opacidad */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
 
 .mountainsContent {
   position: relative;
-  z-index: 3; /* Asegura que el contenido esté por encima de la capa semitransparente */
+  z-index: 3;
   color: white;
   text-align: center;
   top: 50%;
@@ -527,19 +525,17 @@ aside {
   align-items: center;
   gap: 20px;
   padding: 10px;
-
 }
 
 aside h1 {
-  font-size: 2.5rem; /* Ajusta el tamaño según lo necesites */
+  font-size: 2.5rem;
   font-weight: bolder;
-  background: linear-gradient(135deg, #ffffff, #312f2f); /* Degradado de colores */
+  background: linear-gradient(135deg, #ffffff, #312f2f);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Hace que el color del texto sea transparente */
+  color: transparent;
 }
 
-/* Estilos para las preguntas */
 .question {
   color: #fff;
   text-decoration: underline;
@@ -550,58 +546,332 @@ aside h1 {
   padding-top: 10px;
 }
 
-/* Estilos para el contenedor de la pregunta y el ícono */
 .questionCircle {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Añadido para centrar verticalmente el texto y el ícono */
+  align-items: center;
   padding: 10px;
 }
 
 .question.active {
   color: var(--primary-color);
 }
-/* Estilos para las respuestas */
+
 .answers {
   text-align: justify;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease, padding 0.7s ease; /* Añadido transición para padding */
+  transition: max-height 0.7s ease, padding 0.7s ease;
   color: #ffffff;
   padding: 0 10px;
   font-weight: lighter;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Estilo para cuando la respuesta está activa */
 .answers.active {
-  max-height: 180px; 
-  padding: 10px; /* Asegúrate de que el padding se ajuste cuando la respuesta esté activa */
-  transition: max-height 1.5s ease, padding 1.5s ease; /* Transición sincronizada con max-height */
+  max-height: 180px;
+  padding: 10px;
+  transition: max-height 1.5s ease, padding 1.5s ease;
 }
 
-/* Estilos para el ícono del chevron */
 .chevronRight {
   width: 30px;
   height: 20px;
   cursor: pointer;
-  transition: transform 0.5s ease; /* Transición para rotación */
+  transition: transform 0.5s ease;
 }
 
-/* Estilo para el chevron cuando está activo */
 .chevronRight.active {
-  transform: rotate(90deg); /* Rotación del chevron cuando está activo */
+  transform: rotate(90deg);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.section-content {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s forwards;
+}
+
+.section-content.visible {
+  animation: slideInFromLeft 1s forwards;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+  #navLinks {
+    gap: 20px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content h4 {
+    width: 150px;
+    font-size: 0.85rem;
+  }
+
+  section {
+    flex-direction: column;
+    gap: 50px;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  #aboutMe {
+    width: 100%;
+  }
+
+  section img {
+    width: 250px;
+    height: 250px;
+  }
+
+  section h1 {
+    font-size: 2.5rem;
+  }
+
+  #aboutMe h1 {
+    font-size: 2.5rem;
+  }
+
+  #aboutMe p {
+    font-size: 1rem;
+  }
+
+  #languages {
+    grid-template-columns: 1fr;
+  }
+
+  .languageBox {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  #projects img {
+    width: 100%;
+  }
+
+  #projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .singleProject img {
+    height: auto;
+  }
+
+  .mountainsContent p {
+    width: 100%;
+  }
+
+  form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #navLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .content h4 {
+    width: 120px;
+    font-size: 0.75rem;
+  }
+
+  #skills h1 {
+    font-size: 2.5rem;
+  }
+
+  #skills h3 {
+    font-size: 0.85rem;
+  }
+
+  #languages {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .languageBox {
+    padding: 10px;
+  }
+
+  #projects h1 {
+    font-size: 2.5rem;
+  }
+
+  #projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .singleProject img {
+    height: auto;
+  }
+
+  .mountainsContent p {
+    width: 100%;
+  }
+
+  .form-container h1 {
+    font-size: 2.5rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
 }
 
 
+@media (max-width: 480px) {
 
+  h3 {
+    font-size: 1rem;
+  }
+  
+  nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
+  nav img {
+    width: 40px;
+    height: 40px;
+  }
 
+  .content h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
+  .content h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
 
+  .content h4 {
+    width: 100px;
+    font-size: 0.7rem;
+    text-align: center;
+  }
 
+  .content h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
 
+  #skills h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 
+  #skills h3 {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .mountainsContent p {
+    width: 100%;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  section button, #mountains button, form button {
+    width: 150px;
+    height: 50px;
+    font-size: 0.75rem;
+  }
+
+  footer h5 {
+    padding: 20px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  footer {
+    display: grid;
+  }
+
+  /* Form centering adjustments */
+  .form-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  form {
+    width: 80%;
+    text-align: center;
+  }
+
+  input, textarea {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Aside fixed positioning */
+  aside {
+    width: 90%;
+    bottom: 10px;
+    left: 5%;
+    text-align: center;
+  }
+}
+
+/* Ensure aside is fixed on all screen sizes */
+aside {
+  display: none;
+  z-index: 20;
+  right: 30px;
+  bottom: 30%;
+}
 
 
 
