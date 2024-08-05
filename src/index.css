@@ -685,7 +685,7 @@ aside h1 {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
 
   nav {
     padding-top: 10px;
@@ -693,7 +693,6 @@ aside h1 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    width: 100vw;
   }
 
   #navLinks {
