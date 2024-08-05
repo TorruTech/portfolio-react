@@ -685,7 +685,7 @@ aside h1 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
 
   nav {
     padding-top: 10px;
@@ -693,6 +693,7 @@ aside h1 {
     display: flex;
     justify-content: center;
     gap: 10px;
+    width: 100vw;
   }
 
   #navLinks {
@@ -786,7 +787,7 @@ aside h1 {
   }
 
   #projects h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   section {
@@ -816,7 +817,7 @@ aside h1 {
 
   /* Form centering adjustments */
   .form-container {
-    padding: 0px;
+    padding: 40px;
     text-align: center;
   }
 
