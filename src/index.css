@@ -874,7 +874,11 @@ aside h1 {
   
   form {
     width: 100%;
-    text-align: center;
+    text-align: left;
+  }
+
+  form::placeholder {
+    text-align: left;
   }
 
   .form-container h1 {
@@ -884,7 +888,7 @@ aside h1 {
   input, textarea {
     width: 100%;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
   }
 
   /* Aside fixed positioning */
