@@ -744,7 +744,7 @@ aside h1 {
   }
 
   #header h2 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   #navLinks {
@@ -755,7 +755,7 @@ aside h1 {
   }
 
   nav a {
-    font-size: 0.45rem;
+    font-size: 0.4rem;
     white-space: nowrap; /* Evita que los enlaces se envuelvan dentro de ellos mismos */
   }
 
@@ -791,7 +791,7 @@ aside h1 {
   }
 
   #skills h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -838,7 +838,7 @@ aside h1 {
   }
 
   #projects h1 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
   section {
@@ -865,16 +865,20 @@ aside h1 {
   footer {
     display: grid;
   }
-
+  
   /* Form centering adjustments */
   .form-container {
     padding: 40px;
     text-align: center;
   }
-
+  
   form {
     width: 100%;
     text-align: center;
+  }
+
+  .form-container h1 {
+    font-size: 2.5rem;
   }
 
   input, textarea {
@@ -899,5 +903,9 @@ aside h1 {
 
   #video {
     display: none;
+  }
+
+  form button {
+    font-size: 0.7rem;
   }
 }
