@@ -13,7 +13,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <body>
+    <>
       <NavBar />
       <Galaxy />
       <AboutMe />
@@ -24,7 +24,7 @@ function App() {
       <Faqs />
       <FormContainer />
       <Footer />
-    </body>
+    </>
   );
 }
 
