@@ -701,7 +701,7 @@ aside h1 {
   }
 
   #header h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   #navLinks {
@@ -712,7 +712,7 @@ aside h1 {
   }
 
   nav a {
-    font-size: 0.5rem;
+    font-size: 0.45rem;
     white-space: nowrap; /* Evita que los enlaces se envuelvan dentro de ellos mismos */
   }
 
