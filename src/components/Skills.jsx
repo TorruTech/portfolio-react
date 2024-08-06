@@ -63,7 +63,7 @@ export const Skills = () => {
             }
             return newPercentages;
           });
-        }, 30); // Adjust the speed of the animation by changing this value
+        }, 40); // Adjust the speed of the animation by changing this value
       });
     }
   }, [animated]);
