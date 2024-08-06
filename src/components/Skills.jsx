@@ -1,13 +1,41 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+const languages = [
+  {
+    name: "HTML & CSS",
+    percentage: 90
+  },
+  {
+    name: "JavaScript",
+    percentage: 85
+  },
+  {
+    name: "React JS",
+    percentage: 70
+  },
+  {
+    name: "SQL",
+    percentage: 85
+  },
+  {
+    name: "Java",
+    percentage: 90
+  },
+  {
+    name: "Flutter",
+    percentage: 70
+  },
+];
+
 export const Skills = () => {
   const skillsRef = useRef(null);
   const [animated, setAnimated] = useState(false);
+  const [percentages, setPercentages] = useState(languages.map(() => 0));
 
   useEffect(() => {
     const handleScroll = () => {
       const rect = skillsRef.current.getBoundingClientRect();
-      if (rect.top <= window.innerHeight) {
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
         setAnimated(true);
         window.removeEventListener('scroll', handleScroll);
       }
@@ -19,19 +47,40 @@ export const Skills = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (animated) {
+      languages.forEach((language, index) => {
+        let currentPercentage = 0;
+        const interval = setInterval(() => {
+          currentPercentage += 1;
+          setPercentages((prev) => {
+            const newPercentages = [...prev];
+            if (currentPercentage <= language.percentage) {
+              newPercentages[index] = currentPercentage;
+            } else {
+              newPercentages[index] = language.percentage;
+              clearInterval(interval);
+            }
+            return newPercentages;
+          });
+        }, 30); // Adjust the speed of the animation by changing this value
+      });
+    }
+  }, [animated]);
+
   return (
     <div id="skills" ref={skillsRef}>
       <h1>Mis habilidades</h1>
       <h3>Siempre buscando aprender cosas nuevas, pero este es mi conjunto de habilidades principal</h3>
       <div id="languages">
-        {['HTML & CSS', 'JavaScript', 'React JS', 'SQL', 'Java', 'Flutter'].map((skill, index) => (
-          <div className="languageBox" key={skill}>
+        {languages.map((language, index) => (
+          <div className="languageBox" key={language.name}>
             <div className="titles">
-              <h3 style={{ color: 'white' }}>{skill}</h3>
-              <h3 className="counter">{animated ? `${index * 10 + 70}%` : '0%'}</h3>
+              <h3>{language.name}</h3>
+              <h3 className="counter">{percentages[index]}%</h3>
             </div>
             <div className="barsBg">
-              <div className="bars" style={{ width: animated ? `${index * 10 + 70}%` : '0%' }}></div>
+              <div className="bars" style={{ width: `${percentages[index]}%` }}></div>
             </div>
           </div>
         ))}
