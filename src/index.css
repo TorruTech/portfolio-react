@@ -878,7 +878,7 @@ aside h1 {
   }
 
   .form-container h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   input, textarea {
@@ -907,5 +907,9 @@ aside h1 {
 
   form button {
     font-size: 0.7rem;
+  }
+
+  #projects h1 {
+    font-size: 1.3rem;
   }
 }
