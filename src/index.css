@@ -643,6 +643,21 @@ aside h1 {
 
 /* Media Queries for Responsiveness */
 
+@media (max-width: 1950px) {
+  aside {
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    display: block; /* Ensure aside is visible */
+    padding: 20px;
+    border: none;
+    border-radius: 0px;
+    padding: 30px;
+  }
+}
+
 @media (max-width: 1300px) {
   #navLinks {
     gap: 20px;
@@ -715,6 +730,8 @@ aside h1 {
     gap: 20px;
   }
 
+   /* Aside fixed positioning */
+ 
   .singleProject img {
     height: auto;
   }
@@ -891,20 +908,6 @@ aside h1 {
     text-align: left;
   }
 
-  /* Aside fixed positioning */
-  aside {
-    width: 100%;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    display: block; /* Ensure aside is visible */
-    padding: 20px;
-    border: none;
-    border-radius: 0px;
-    padding: 30px;
-  }
-
   #video {
     display: none;
   }
@@ -917,3 +920,4 @@ aside h1 {
     font-size: 1.1rem;
   }
 }
+
