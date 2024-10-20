@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react';
 
 const projects = [
   {
-    url: "https://guess-the-species.vercel.app/",
-    imgSrc: "./images/adivinalaespecie.png",
-    title: "Adivina la especie"
+    url: "https://proydes-spa.vercel.app/",
+    imgSrc: "./images/proydes.png",
+    title: "Landing page de Proydes S.L."
   },
   {
     url: "https://tic-tac-mqzpbiuxd-torrutechs-projects.vercel.app/",
